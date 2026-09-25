@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build artifacts
+dist/
+dist-ssr/
+build/
+*.local
+
+# Environment & Sensitive Files
+.env
+.env.*
+*.env
+!.env.example
+
+# Secrets, private keys & credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa*
+credentials.json
+service-account*.json
+secrets.*
+
+# Supabase local files & caches
+.temp/
+supabase/.temp/
+supabase/.branches/
+
+# Debug and runtime logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Caches and temporary files
+.cache/
+.eslintcache
+*.tsbuildinfo
+tmp/
+
+# Editor & IDE directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

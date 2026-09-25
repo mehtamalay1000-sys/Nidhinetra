@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --govt-primary: #0B4F9C;
+    --govt-deep: #123B6D;
+    --govt-saffron: #E87B18;
+    --govt-green: #2E7D32;
+    --govt-bg: #F7F8FA;
+    --govt-surface: #FFFFFF;
+    --govt-border: #D9DEE5;
+    --govt-text: #1F2937;
+    --govt-text-muted: #5F6B7A;
+    --govt-warning: #B7791F;
+    --govt-danger: #B42318;
+    --govt-info: #1769AA;
+  }
+
+  /* Font Scaling support */
+  html[data-font-size="sm"] {
+    font-size: 14px;
+  }
+  html[data-font-size="md"] {
+    font-size: 16px;
+  }
+  html[data-font-size="lg"] {
+    font-size: 18px;
+  }
+
+  /* High Contrast mode support */
+  html[data-contrast="high"] {
+    --govt-bg: #FFFFFF;
+    --govt-surface: #FFFFFF;
+    --govt-border: #000000;
+    --govt-text: #000000;
+    --govt-text-muted: #111827;
+    filter: contrast(115%);
+  }
+
+  html[data-contrast="high"] body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  html[data-contrast="high"] .border,
+  html[data-contrast="high"] .border-b,
+  html[data-contrast="high"] .border-t,
+  html[data-contrast="high"] .border-l,
+  html[data-contrast="high"] .border-r {
+    border-color: #000000 !important;
+  }
+
+  body {
+    font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1F2937;
+    background-color: #F7F8FA;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.375rem;
+  z-index: 10;
+}
+
+/* Restrained animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
